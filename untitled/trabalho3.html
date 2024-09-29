@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prensados da Feitep</title>
+  <LINK rel="icon"href="images/Google-Noto-Emoji-Food-Drink-32385-hot-dog.512.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #ffcb05;
+      color: #333;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    header nav {
+      display: flex;
+      gap: 20px;
+      flex-grow: 1;
+      justify-content: flex-end;
+    }
+
+    header nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .banner {
+      background: url('images/um-cachorro-quente-com-pimenta-e-mostarda-nele_899870-9463.png') no-repeat center center;
+      background-size: cover;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .banner img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .categories {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .categories h2 {
+      margin-bottom: 20px;
+    }
+
+    .categories .category-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .categories .category-item {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .categories .category-item:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .categories .category-item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .categories .category-item h3 {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .categories .category-item p {
+      margin: 10px 0;
+    }
+
+    .categories .category-item .price {
+      font-size: 20px;
+      color: #28a745;
+      margin-bottom: 10px;
+    }
+
+    .pedido-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .pedido-button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">Prensado da Feitep</div>
+  <nav>
+    <a href="trabalho2.html" id="homeLink">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contato</a>
+  </nav>
+</header>
+
+<div class="banner">
+  <h1>Dogs do Luquinhas</h1>
+</div>
+
+<section class="categories" id="menu">
+  <h2>Nossos Produtos</h2>
+  <div class="category-list">
+    <div class="category-item">
+      <img src="images/dogao.png" alt="Dogão Prensado">
+      <h3>Dogão Prensado</h3>
+      <div class="price">R$ 14,00</div>
+      <p>Pão (produção própria sem conservantes), Molho de Cachorro Quente, Salsicha, Milho e Batata Palha.</p>
+      <a class="pedido-button" href="#pedido">Pedir</a>
+    </div>
+    <div class="category-item">
+      <img src="images/dogao.png" alt="Prensado Vegetariano">
+      <h3>Prensado Vegetariano</h3>
+      <div class="price">R$ 12,00</div>
+      <p>Pão (produção própria sem conservantes), Molho de Cachorro Quente, Salsicha, Milho e Batata Palha.</p>
+      <a class="pedido-button" href="#pedido">Pedir</a>
+    </div>
+    <div class="category-item">
+      <img src="images/dogao.png" alt="Prensado Salada">
+      <h3>Prensado Salada</h3>
+      <div class="price">R$ 18,00</div>
+      <p>Pão (produção própria sem conservantes), Molho da Casa, Milho, Alface, Tomate, Mussarela, Ovo e Hambúrguer artesanal (160g).</p>
+      <a class="pedido-button" href="#pedido">Pedir</a>
+    </div>
+    <div class="category-item">
+      <img src="images/dogao.png" alt="Prensado Salada Especial">
+      <h3>Prensado Salada Especial</h3>
+      <div class="price">R$ 20,00</div>
+      <p>Pão (produção própria sem conservantes), Molho da Casa, Milho, Alface, Tomate, Mussarela, Ovo, Hambúrguer artesanal (160g) e Salsicha.</p>
+      <a class="pedido-button" href="#pedido">Pedir</a>
+    </div>
+    <div class="category-item">
+      <img src="images/dogao.png" alt="Prensado Bacon">
+      <h3>Prensado Bacon</h3>
+      <div class="price">R$ 24,00</div>
+      <p>Pão (produção própria sem conservantes), Molho da Casa, Milho, Mussarela, Tomate, Ovo, Hambúrguer artesanal (160g) e Salsicha.</p>
+      <a class="pedido-button" href="#pedido">Pedir</a>
+    </div>
+    <div class="category-item">
+      <img src="images/dogao.png" alt="Prensado de Calabresa">
+      <h3>Prensado de Calabresa</h3>
+      <div class="price">R$ 22,00</div>
+      <p>Pão (produção própria sem conservantes), Molho da Casa, Milho, Tomate, Mussarela, Ovo, Hambúrguer artesanal (160g) e Calabresa.</p>
+      <a class="pedido-button" href="#pedido">Pedir</a>
+    </div>
+    <div class="category-item">
+      <img src="images/dogao.png" alt="Joãozinho">
+      <h3>Joãozinho</h3>
+      <div class="price">R$ 200,00</div>
+      <p>Pão (produção própria sem conservantes), Molho de Tomate, Queijo Cheddar, Alface e Peito de Frango.</p>
+      <a class="pedido-button" href="#pedido">Pedir</a>
+    </div>
+    <div class="category-item">
+      <img src="images/dogao.png" alt="Professor Felipe">
+      <h3>Professor Felipe</h3>
+      <div class="price">R$ 19,00</div>
+      <p>Pão (produção própria sem conservantes), Molho Especial, Queijo Muçarela, Bacon, Alface e Tomate.</p>
+      <a class="pedido-button" href="#pedido">Pedir</a>
+    </div>
+    <div class="category-item">
+      <img src="images/dogao.png" alt="Matheus">
+      <h3>Matheus</h3>
+      <div class="price">R$ 20,00</div>
+      <p>Pão (produção própria sem conservantes), Hambúrguer Artesanal, Queijo Muçarela, Molho Barbecue e Bacon.</p>
+      <a class="pedido-button" href="#pedido">Pedir</a>
+    </div>
+    <div class="category-item">
+      <img src="images/dogao.png" alt="Gustavinho">
+      <h3>Gustavinho</h3>
+      <div class="price">R$ 18,00</div>
+      <p>Pão (produção própria sem conservantes), Hambúrguer de Calabresa, Queijo Coalho e Molho Especial.</p>
+      <a class="pedido-button" href="#pedido">Pedir</a>
+    </div>
+    <div class="category-item">
+      <img src="images/dogao.png" alt="Corinthians">
+      <h3>Corinthians</h3>
+      <div class="price">R$ 21,00</div>
+      <p>Pão (produção própria sem conservantes), Hambúrguer Artesanal, Queijo Provolone, Molho de Maionese e Bacon.</p>
+      <a class="pedido-button" href="#pedido">Pedir</a>
+    </div>
+    <div class="category-item">
+      <img src="images/dogao.png" alt="Sem Mundial">
+      <h3>Sem Mundial</h3>
+      <div class="price">R$ 22,00</div>
+      <p>Pão (produção própria sem conservantes), Hambúrguer, Queijo Cheddar, Molho especial e Alface.</p>
+      <a class="pedido-button" href="#pedido">Pedir</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2024 Prensados da Feitep. Todos os direitos reservados.
+</footer>
+</body>
+</html>

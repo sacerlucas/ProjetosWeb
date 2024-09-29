@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Login e Cadastro</title>
+  <link rel="icon" href="images/Google-Noto-Emoji-Food-Drink-32385-hot-dog.512.png" type="image/x-icon">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://img.freepik.com/vetores-premium/padrao-sem-costura-com-hamburgueres-desenhados-a-mao-cachorros-quentes-batatas-fritas-e-abacaxi-em-fundo-amarelo_123891-79558.jpg?w=740') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 40px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .container h2 {
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    .container input[type="text"],
+    .container input[type="password"],
+    .container input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .container input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .container input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .container .link {
+      margin-top: 20px;
+      display: block;
+      text-align: center;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .container .link:hover {
+      text-decoration: underline;
+    }
+
+    .success-message {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .success-message button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .success-message button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container" id="loginContainer">
+  <h2>Login</h2>
+  <form id="loginForm">
+    <input type="text" placeholder="Usuário" required>
+    <input type="password" placeholder="Senha" required>
+    <input type="submit" value="Entrar">
+  </form>
+  <a href="#" class="link" onclick="showSignup()">Criar uma conta</a>
+</div>
+
+<div class="container" id="signupContainer" style="display: none;">
+  <h2>Cadastro</h2>
+  <form id="signupForm">
+    <input type="text" placeholder="Nome" required>
+    <input type="email" placeholder="Email" required>
+    <input type="text" placeholder="Usuário" required>
+    <input type="password" placeholder="Senha" required>
+    <input type="password" placeholder="Confirmar Senha" required>
+    <input type="submit" value="Cadastrar">
+  </form>
+  <a href="#" class="link" onclick="showLogin()">Já tem uma conta? Faça login</a>
+  <div class="success-message" id="successMessage">
+    <p>Cadastrado com sucesso!</p>
+    <button onclick="showLogin()">Ir para a tela de login</button>
+  </div>
+</div>
+
+<script>
+  function showSignup() {
+    document.getElementById('loginContainer').style.display = 'none';
+    document.getElementById('signupContainer').style.display = 'block';
+  }
+
+  function showLogin() {
+    document.getElementById('signupContainer').style.display = 'none';
+    document.getElementById('loginContainer').style.display = 'block';
+  }
+
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    window.location.href = 'trabalho3.html';
+  });
+
+  document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    document.getElementById('signupForm').style.display = 'none';
+    document.getElementById('successMessage').style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
